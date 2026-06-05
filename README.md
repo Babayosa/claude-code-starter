@@ -1,5 +1,9 @@
 # claude-code-starter
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![Built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-7c3aed) ![Shell](https://img.shields.io/badge/shell-bash-89e051)
+
+> Drop-in safety rails, a self-improving lessons loop, and trigger-based context loading for [Claude Code](https://github.com/anthropics/claude-code) — opinionated defaults you can adopt in one command.
+
 An opinionated Claude Code configuration built around one principle: **every line in your config should answer "would Claude do something wrong without this?"**
 
 Most CLAUDE.md files tell Claude how to think. This one tells Claude what to know — safety constraints, tech stack rules, project context, and trigger-based loading so domain knowledge appears exactly when needed.
@@ -14,6 +18,12 @@ Most CLAUDE.md files tell Claude how to think. This one tells Claude what to kno
 | **Codex orchestration** | `AGENTS.md` files give headless agents project-specific rules for parallel dispatch |
 | **Cross-project memory** | `MEMORY.md` indexes project build commands, tech stacks, and pointers in one place |
 | **Commit skill** | File-based commit messages that avoid shell escaping issues |
+
+## Requirements
+
+- [Claude Code](https://github.com/anthropics/claude-code) installed
+- macOS or Linux (the install script and safety hook are Bash)
+- [`trash`](https://github.com/sindresorhus/trash) CLI for the `rm`-blocking rule (recommended)
 
 ## Quick Start
 
@@ -160,6 +170,10 @@ Memory files store user preferences, project context, and reference pointers. Th
 
 **Safety rules** — Add constraints specific to your environment. If you have a footgun, put a rule against it.
 
+## Contributing
+
+Issues and PRs welcome — new stack templates, safety-hook rules, and skills especially. See [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## License
 
-MIT
+[MIT](LICENSE) © Babayosa
